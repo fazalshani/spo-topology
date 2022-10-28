@@ -2,9 +2,9 @@
 
 import networkscan
 from nornir import InitNornir
-from nornir_napalm.
+from nornir_netmiko import netmiko_send_command
+from nornir_napalm.plugins.tasks import napalm_get
 
-# import nmap3
 def write_file(self, file_type=0, filename="hosts.yaml"):
         """ Method to write a file with the list of the detected hosts """
 
@@ -33,7 +33,7 @@ if __name__=='__main__':
 
     nr = InitNornir(config_file="config.yaml")
     # Run Nornir task (here getting the ARP table of the devices)
-    result = nr.run(task=networking.napalm_get,name=" ARP table ",getters=["arp_table"])
+    # result = nr.run(task=networking.napalm_get,name=" ARP table ",getters=["arp_table"])
 
     # Display the result
     print("Display ARP table of the network devices")

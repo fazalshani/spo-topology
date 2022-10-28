@@ -1,0 +1,6 @@
+--
+iosxr:
+  platform: 'iosxr'
+
+ios:
+  platform: 'ios'
